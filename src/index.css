@@ -1,13 +1,1528 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --text-primary: #CEA36E;
+    --text-white: #FFFFFF;
+    --text-black: #000000;
+    --bgcolor: var(--text-primary);
+    --bgblack: #212123;
+    --border-color: var(--text-primary);
+    
+} 
+
+.btn-brown{background-color: var(--bgcolor) !important; border-color: var(--border-color) !important;}
+
+body{
+    background-color: var(--bgblack) !important;
+    font-family: 'Arima Madurai' !important;
+    font-family: 'Arimo' !important;
+    font-style: normal !important;
 }
+
+.animation-time{animation-duration: 3s !important;}
+
+/* header component css start */
+
+.header{
+    padding: 15px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.header .navbar-brand img{
+    width: 75%;
+}
+
+.header .collapse ul li{
+    padding: 0 12px;
+}
+
+.header .collapse ul li.active a{
+    color: var(--text-primary) !important;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.header .collapse ul li a{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+}
+
+.header .collapse .contact-button button{
+    border-radius: 50px;
+    padding: 0.5rem 20px;
+}
+
+/* header component css end */
+
+/* slider component css start */
+
+.slider{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 850px;
+    background-image: url("./assets/image/hero-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.slider .container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.slider .container .slider-content span{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.slider .container .slider-content h1{
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 90px;
+    color: var(--text-white);
+    font-family: 'Arima Madurai';
+    margin: 0;
+    padding: 0;
+}
+
+.slider .container .slider-content b{
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.slider .container .slider-content p{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: var(--text-white);
+    max-width: 620px;
+    margin: 0;
+    padding: 0;
+}
+
+.slider .container .slider-content button{
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    margin-top: 25px;
+    position: relative;
+}
+
+.slider .container .slider-content button::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 70px;
+    height: 2px;
+    background-color: var(--bgcolor);
+    border-radius: 10px;
+}
+.slider .container .slider-content button::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -15px;
+    width: 35px;
+    height: 2px;
+    background-color: var(--bgcolor);
+    border-radius: 10px;
+}
+
+.slider .container .slider-img img{
+    width: 75%;
+}
+
+/* slider component css end */
+
+
+
+/* about component css start */
+
+.about{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 850px;
+    background-image: url("./assets/image/about-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.about .container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.about .container .about-content span{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.about .container .about-content h1{
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 92px;
+    color: var(--text-white);
+    font-family: 'Arima Madurai';
+    margin: 0;
+    padding: 0;
+    max-width: 500px;
+}
+
+.about .container .about-content b{
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.about .container .about-content p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: var(--text-white);
+    max-width: 580px;
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+.about .container .about-content button{
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    margin-top: 25px;
+    position: relative;
+}
+
+.about .container .about-content button::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 70px;
+    height: 2px;
+    background-color: var(--bgcolor);
+    border-radius: 10px;
+}
+.about .container .about-content button::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -15px;
+    width: 35px;
+    height: 2px;
+    background-color: var(--bgcolor);
+    border-radius: 10px;
+}
+
+.about .container .about-img img{
+    width: 65%;
+}
+
+/* about component css end */
+
+
+
+/* service component css start */
+.services{
+    position: relative;
+}
+.services::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 1200px;
+    background-color: var(--bgblack);
+    z-index: -2;
+}
+.services::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 970px;
+    background-color: var(--bgcolor);
+    z-index: -1;
+}
+.services .container{
+    z-index: 999;
+}
+
+.services .container h3{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    color: var(--text-black);
+    padding: 60px 0;
+    margin: 0;
+}
+.services .services-wrapper p{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 43px;
+    letter-spacing: 0.02em;
+    color: var(--text-black);;
+    margin: 0;
+    padding: 0;
+    max-width: 500px;
+}
+
+.services .services-wrapper .service-img{
+    width: 85%;
+    height: 650px;
+    border-radius: 40px;
+    margin: 62px 0 0 0;
+}
+.services .services-wrapper .service-img img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+    object-position: center
+}
+
+.services .services-content .service-list{
+    background: #FFFFFF;
+    border-radius: 30px;
+    text-align: center;
+    padding: 48px 25px;
+    width: 90%;
+}
+
+.services .services-content .service-list h4{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 25px 0 0 0;
+}
+
+.services .services-content .service-list p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #201E1F;
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+.services .services-content .service-list button, .services .services-content button{
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    margin-top: 25px;
+    position: relative;
+}
+
+.services .services-content .service-list button::after, .services .services-content button::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 70px;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 10px;
+}
+.services .services-content .service-list button::before, .services .services-content button::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -15px;
+    width: 35px;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 10px;
+}
+
+/* service component css end */
+
+
+
+/* booking now component css start */
+.booking{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-image: url("./assets/image/book-appointment.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    margin: 90px 0 70px;
+}
+
+.booking .booking-content{
+   padding: 102px 0;
+}
+
+.booking .booking-content span{
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 52px;
+    color: var(--text-primary);
+    font-family: 'Arima Madurai' !important;
+}
+.booking .booking-content h2{
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 92px;
+    color: var(--text-white);
+    font-family: 'Arima Madurai' !important;
+}
+.booking .booking-content h2 b{
+    color: var(--text-primary);
+}
+
+.booking .booking-content button{
+    background-color: var(--text-primary);
+    border-color: var(--text-primary);
+    color: var(--text-black);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    margin-top: 25px;
+    position: relative; 
+    border-radius: 50px;   
+    padding: 0.5rem 30px;
+}
+/* booking now component css end */
+
+/* our works component css start*/
+.ourworks h3{
+    font-family: 'Arima Madurai';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 92px;
+    color: var(--text-white);
+    margin: 0;
+    padding: 0 0 48px 0;
+}
+
+.ourwork-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.ourworks .ourworks-img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 25px;
+}
+.ourworks .ourworks-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* our works component css end*/
+
+
+/* Working hours component css start */
+.working-hours .hours-wrapper{
+    background-color: var(--text-primary);
+    padding: 80px 63px;
+    border-radius: 150px;
+    margin: 80px 0;
+}
+
+.working-hours .hours-wrapper .hours-img img{
+    border: 1px solid #FFFFFF;
+    border-radius: 355px;
+    width: 100%;
+    margin-bottom: 64px;
+}
+
+.working-hours .working-details{
+    padding-left: 150px;
+}
+
+.working-hours .working-details h4{
+    font-family: 'Arima Madurai';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 80px;
+    color: #212123;
+    margin: 0;
+    padding: 0;
+    max-width: 450px;
+}
+.working-hours .working-details p{
+    font-family: 'Arimo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 43px;
+    letter-spacing: 0.02em;
+    color: var(--text-white);
+    margin: 0;
+    padding: 0;
+    max-width: 300px;
+}
+
+.working-hours .working-time{
+    padding-left: 150px;
+}
+
+.working-hours .working-time h3{
+    font-family: 'Arima Madurai';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 43px;
+    letter-spacing: 0.02em;
+    color: var(--text-black);
+    margin: 0;
+    padding: 0 0 15px 0;
+}
+.working-hours .working-time ul li{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: var(--text-white);
+    margin: 0;
+    padding: 0;
+}
+
+.working-hours .working-time ul{
+    margin: 0;
+}
+
+
+.working-hours .working-details button{
+    background-color: #212123;
+    border-color: #212123;
+    color: var(--text-white);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    margin-top: 25px;
+    border-radius: 50px;   
+    padding: 0.5rem 30px;
+}
+
+/* Working hours component css end */
+
+
+/* Footer component css start */
+
+.footer .footer-info h4{
+    font-family: 'Arima Madurai';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 52px;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.footer .footer-info h4 b{
+    color: var(--text-white);
+}
+
+.footer .footer-info p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 35px;
+    letter-spacing: 0.02em;
+    color: var(--text-white);
+}
+
+.footer .footer-info input{
+    border: 2px solid #CEA36E;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--text-white);
+    opacity: 0.56;
+    background-color: transparent;
+    padding: 15px 25px;
+}
+
+.footer .footer-info button{
+    border: 2px solid #CEA36E;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000;
+    background-color: var(--text-primary);
+    padding: 10px 30px;
+    margin: 25px 0 0 0;
+}
+.footer .footer-info .d-flex{
+    margin-bottom: 25px;
+}
+.footer .footer-info .d-flex img{
+    width: 30px;
+}
+
+.footer .footer-info .d-flex span{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: var(--text-white);
+    padding-left: 25px;
+}
+.footer .footer-info .d-block li{
+    display: inline-block;
+    width: 60px;
+    /* padding: 0 30px; */
+    margin-top: 25px;
+}
+
+.footer-menu ul li{
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: var(--text-white);
+    padding: 35px 25px 0;
+
+}
+
+
+.footer-copyright p{
+    text-align: center;
+    font-family: 'Arima Madurai';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: var(--text-white);
+    padding: 35px 0;
+}
+.footer-copyright b{
+    color: var(--text-primary);
+}
+
+.footer{
+    position: relative;
+    padding: 48px 0;
+    border-top: 1px solid #3D3D3F;
+    border-bottom: 1px solid #3D3D3F;
+}
+
+/* Footer component css end */
+
+
+@media (max-width: 320px) {
+
+    .header{
+        position: inherit;
+    }
+    .navbar-toggler-icon{
+        background-image: url("./assets/image/menu.svg") !important;
+    }
+
+    .slider .row .col-lg-6:last-child{
+        order: 0;
+    }
+
+    .slider .row .col-lg-6:first-child{
+        order: 1;
+        margin-top: 25px;
+    }
+
+    .slider .container .slider-content span{
+        font-size: 18px;
+    }
+    .slider .container .slider-content h1{
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .slider .container .slider-img img{
+        width: 100%;
+    }
+
+    .slider,.about{
+        height: auto;
+        margin-bottom: 55px;
+    }
+
+    .slider .container,.about .container{
+        position: inherit;
+        left: auto;
+        top: auto;
+        transform: translate(0,0);
+        width: 100%;
+    }
+
+    .about .container .about-img img{
+        width: 100%;
+    }
+
+    .about .container .about-content h1{
+        font-size: 36px;
+        line-height: 48px;
+        margin-top: 25px;
+    }
+
+    .services .container h3{
+        padding: 48px 0 30px;
+    }
+
+    .services .services-content .service-list{
+        width: 100%;
+    }
+
+    .services .services-wrapper .service-img{
+        width: 100%;
+        height: 350px;
+        border-radius: 20px;
+        margin: 48px 0;
+    }
+
+    .services .services-wrapper .service-img img{
+        border-radius: 20px; 
+    }
+
+    .booking{
+        margin: 48px 0;
+        height: 450px;
+    }
+
+    .booking .booking-content span{
+        font-size: 18px;
+    }
+
+    .booking .booking-content{
+        text-align: center;
+        padding: 48px 0;
+    }
+
+    .booking .booking-content h2{
+        font-size: 36px;
+        line-height: 56px;
+    }
+
+    .ourworks h3{
+        padding: 15px 0;
+        font-size: 36px;
+    }
+
+    .working-hours .hours-wrapper .hours-img img{
+        margin-bottom: 35px;
+        height: 150px;
+    }
+
+    .working-hours .working-details h4{
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .working-hours .working-details{
+        margin-bottom: 25px;
+    }
+
+    .working-hours .working-details,.working-hours .working-time{
+        padding-left: 0;
+    }
+
+    .working-hours .hours-wrapper{
+        padding: 25px;
+        border-radius: 30px;
+    }
+
+    .footer-menu ul li{
+        padding-left: 0;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 575.98px){
+    .header{
+        position: inherit;
+    }
+    .navbar-toggler-icon{
+        background-image: url("./assets/image/menu.svg") !important;
+    }
+
+    .slider .row .col-lg-6:last-child{
+        order: 0;
+    }
+
+    .slider .row .col-lg-6:first-child{
+        order: 1;
+        margin-top: 25px;
+    }
+
+    .slider .container .slider-content span{
+        font-size: 18px;
+    }
+    .slider .container .slider-content h1{
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .slider .container .slider-img img{
+        width: 100%;
+    }
+
+    .slider,.about{
+        height: auto;
+        margin-bottom: 55px;
+    }
+
+    .slider .container,.about .container{
+        position: inherit;
+        left: auto;
+        top: auto;
+        transform: translate(0,0);
+        width: 100%;
+    }
+
+    .about .container .about-img img{
+        width: 100%;
+    }
+
+    .about .container .about-content h1{
+        font-size: 36px;
+        line-height: 48px;
+        margin-top: 25px;
+    }
+
+    .services .container h3{
+        padding: 48px 0 30px;
+    }
+
+    .services .services-content .service-list{
+        width: 100%;
+    }
+
+    .services .services-wrapper .service-img{
+        width: 100%;
+        height: 350px;
+        border-radius: 20px;
+        margin: 48px 0;
+    }
+
+    .services .services-wrapper .service-img img{
+        border-radius: 20px; 
+    }
+
+    .booking{
+        margin: 48px 0;
+        height: 450px;
+    }
+
+    .booking .booking-content span{
+        font-size: 18px;
+    }
+
+    .booking .booking-content{
+        text-align: center;
+        padding: 48px 0;
+    }
+
+    .booking .booking-content h2{
+        font-size: 36px;
+        line-height: 56px;
+    }
+
+    .ourwork-wrapper{
+        justify-content: center;
+    }
+
+    .ourworks h3{
+        padding: 15px 0;
+        font-size: 36px;
+    }
+
+    .working-hours .hours-wrapper .hours-img img{
+        margin-bottom: 35px;
+        height: 150px;
+    }
+
+    .working-hours .working-details h4{
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .working-hours .working-details{
+        margin-bottom: 25px;
+    }
+
+    .working-hours .working-details,.working-hours .working-time{
+        padding-left: 0;
+    }
+
+    .working-hours .hours-wrapper{
+        padding: 25px;
+        border-radius: 30px;
+        margin: 48px 0;
+    }
+
+    .footer-menu ul.d-inline-block{
+        margin-top: 25px;
+    }
+
+    .footer-menu ul li{
+        padding-left: 0;
+        padding: 0 5px 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    .header{
+        position: inherit;
+    }
+    .navbar-toggler-icon{
+        background-image: url("./assets/image/menu.svg") !important;
+    }
+
+    .slider .row .col-lg-6:last-child{
+        order: 0;
+    }
+
+    .slider .row .col-lg-6:first-child{
+        order: 1;
+        margin-top: 25px;
+    }
+
+    .slider .container .slider-content span{
+        font-size: 18px;
+    }
+    .slider .container .slider-content h1{
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .slider .container .slider-img img{
+        width: 100%;
+    }
+
+    .slider,.about{
+        height: auto;
+        margin-bottom: 55px;
+    }
+
+    .slider .container,.about .container{
+        position: inherit;
+        left: auto;
+        top: auto;
+        transform: translate(0,0);
+        width: 100%;
+    }
+
+    .about .container .about-img{
+        text-align: center !important;
+    }
+
+    .about .container .about-content h1{
+        font-size: 36px;
+        line-height: 48px;
+        margin-top: 25px;
+    }
+
+    .services .container h3{
+        padding: 48px 0 30px;
+    }
+
+    .services .services-content .service-list{
+        width: 100%;
+    }
+
+    .services .services-wrapper .service-img{
+        width: 100%;
+        height: 350px;
+        border-radius: 20px;
+        margin: 48px 0;
+    }
+
+    .services .services-wrapper .service-img img{
+        border-radius: 20px; 
+    }
+
+    .booking{
+        margin: 48px 0;
+        height: 350px;
+    }
+
+    .booking .booking-content span{
+        font-size: 18px;
+    }
+
+    .booking .booking-content{
+        text-align: center;
+        padding: 48px 0;
+    }
+
+    .booking .booking-content h2{
+        font-size: 36px;
+        line-height: 56px;
+    }
+
+    .ourwork-wrapper{
+        justify-content: center;
+    }
+
+    .ourworks .ourworks-img{
+        margin: 8px;
+    }
+
+    .ourworks h3{
+        padding: 15px 0;
+        font-size: 36px;
+    }
+
+    .working-hours .hours-wrapper .hours-img img{
+        margin-bottom: 35px;
+        height: 150px;
+    }
+
+    .working-hours .working-details h4{
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .working-hours .working-details{
+        margin-bottom: 25px;
+    }
+
+    .working-hours .working-details,.working-hours .working-time{
+        padding-left: 0;
+    }
+
+    .working-hours .hours-wrapper{
+        padding: 25px;
+        border-radius: 30px;
+        margin: 48px 0;
+    }
+
+    .footer-menu ul.d-inline-block{
+        margin-top: 25px;
+    }
+
+    .footer-menu ul li{
+        padding-left: 0;
+        padding: 0 5px 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .header{
+        position: inherit;
+    }
+    .navbar-toggler-icon{
+        background-image: url("./assets/image/menu.svg") !important;
+    }
+
+    .slider .container .slider-content p{
+        font-size: 18px;
+    }
+    .slider .container .slider-content span{
+        font-size: 18px;
+    }
+    .slider .container .slider-content h1{
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .slider .container .slider-img img{
+        width: 100%;
+    }
+
+    .slider,.about{
+        height: auto;
+        margin-bottom: 55px;
+    }
+
+    .slider .container,.about .container{
+        position: inherit;
+        left: auto;
+        top: auto;
+        transform: translate(0,0);
+        width: 100%;
+    }
+
+    .about .container .about-img{
+        text-align: center !important;
+    }
+    .about .container .about-img img{
+        width: 100%;
+    }
+
+    .about .container .about-content p{
+        font-size: 18px;
+    }
+
+    .about .container .about-content h1{
+        font-size: 36px;
+        line-height: 48px;
+        margin-top: 25px;
+    }
+
+    .services .container h3{
+        padding: 48px 0 30px;
+    }
+
+    .services .services-content .service-list{
+        width: 100%;
+    }
+
+    .services .services-wrapper .service-img{
+        width: 100%;
+        height: 350px;
+        border-radius: 20px;
+        margin: 48px 0;
+    }
+
+    .services .services-wrapper .service-img img{
+        border-radius: 20px; 
+    }
+
+    .booking{
+        margin: 48px 0;
+        height: 350px;
+    }
+
+    .booking .booking-content span{
+        font-size: 18px;
+    }
+
+    .booking .booking-content{
+        text-align: center;
+        padding: 48px 0;
+    }
+
+    .booking .booking-content h2{
+        font-size: 36px;
+        line-height: 56px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .ourwork-wrapper{
+        justify-content: center;
+    }
+
+    .ourworks .ourworks-img{
+        margin: 10px;
+        width: 220px;
+        height: 220px;
+    }
+
+    .ourworks h3{
+        padding: 15px 0;
+        font-size: 36px;
+    }
+
+    .working-hours .hours-wrapper .hours-img img{
+        margin-bottom: 35px;
+        height: 250px;
+    }
+
+    .working-hours .working-details h4{
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .working-hours .working-details{
+        margin-bottom: 25px;
+    }
+
+    .working-hours .working-details,.working-hours .working-time{
+        padding-left: 0;
+    }
+
+    .working-hours .hours-wrapper{
+        padding: 25px;
+        border-radius: 30px;
+        margin: 48px 0;
+    }
+
+    .footer{
+        padding: 30px 0;
+    }
+
+    .footer-menu ul.d-inline-block{
+        margin-top: 25px;
+    }
+
+    .footer-menu ul li{
+        padding-left: 0;
+        padding: 0 5px 0;
+    }
+
+    .footer-copyright p{
+        margin: 0;
+        padding: 25px 0;
+    }
+}   
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+    
+    .navbar-toggler-icon{
+        background-image: url("./assets/image/menu.svg") !important;
+    }
+
+    .slider .container .slider-content p{
+        font-size: 18px;
+    }
+    .slider .container .slider-content span{
+        font-size: 18px;
+    }
+    .slider .container .slider-content h1{
+        font-size: 48px;
+        line-height: 70px;
+    }
+
+    .slider{
+        height: 600px;
+        margin-bottom: 0px;
+    }
+
+    .about{
+        height: 550px;
+        margin-bottom: 55px;
+    }
+
+    .slider .container{
+        margin-top: 35px;
+    }
+
+    /* .about .container{
+        position: inherit;
+        left: auto;
+        top: auto;
+        transform: translate(0,0);
+        width: 100%;
+    } */
+
+    .about .container .about-img{
+        text-align: center !important;
+    }
+    /* .about .container .about-img img{
+        width: 100%;
+    } */
+
+    .about .container .about-content p{
+        font-size: 18px;
+    }
+
+    .about .container .about-content h1{
+        font-size: 36px;
+        line-height: 48px;
+        margin-top: 25px;
+    }
+
+    .services .container h3{
+        padding: 48px 0 30px;
+    }
+
+    .services .services-content .service-list{
+        width: 100%;
+    }
+
+    .services .services-wrapper .service-img{
+        width: 100%;
+        height: 350px;
+        border-radius: 20px;
+        margin: 48px 0;
+    }
+
+    .services .services-wrapper .service-img img{
+        border-radius: 20px; 
+    }
+
+    .booking{
+        margin: 48px 0;
+        height: 350px;
+    }
+
+    .booking .booking-content span{
+        font-size: 18px;
+    }
+
+    .booking .booking-content{
+        
+        padding: 48px 0;
+    }
+
+    .booking .booking-content h2{
+        font-size: 36px;
+        line-height: 56px;
+    }
+
+    .ourwork-wrapper{
+        justify-content: center;
+    }
+
+    .ourworks .ourworks-img{
+        margin: 10px;
+        width: 220px;
+        height: 220px;
+    }
+
+    .ourworks h3{
+        padding: 15px 0;
+        font-size: 36px;
+    }
+
+    .working-hours .hours-wrapper .hours-img img{
+        margin-bottom: 35px;
+        height: 320px;
+    }
+
+    .working-hours .working-details h4{
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .working-hours .working-details{
+        margin-bottom: 25px;
+    }
+
+    .working-hours .working-details,.working-hours .working-time{
+        padding-left: 0;
+    }
+
+    .working-hours .hours-wrapper{
+        padding: 25px;
+        border-radius: 30px;
+        margin: 48px 0;
+    }
+
+    .footer{
+        padding: 30px 0;
+    }
+
+    .footer-menu ul.d-inline-block{
+        margin-top: 25px;
+    }
+
+    .footer-menu ul li{
+        padding-left: 0;
+        padding: 0 5px 0;
+    }
+
+    .footer-copyright p{
+        margin: 0;
+        padding: 25px 0;
+    } 
+
+    .footer .col-12:nth-child(2) .footer-info{
+        margin-left: 48px !important;
+        padding-left: 0 !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440.98px){
+
+    .slider .container .slider-content p{
+        font-size: 18px;
+    }
+    .slider .container .slider-content span{
+        font-size: 18px;
+    }
+    .slider .container .slider-content h1{
+        font-size: 48px;
+        line-height: 70px;
+    }
+
+    .slider{
+        height: 700px;
+        margin-bottom: 0px;
+    }
+
+    .about{
+        height: 550px;
+        margin-bottom: 55px;
+    }
+
+    .slider .container{
+        margin-top: 35px;
+    }
+
+
+    .about .container .about-img{
+        text-align: center !important;
+    }
+
+    .about .container .about-content p{
+        font-size: 18px;
+    }
+
+    .about .container .about-content h1{
+        font-size: 36px;
+        line-height: 48px;
+        margin-top: 25px;
+    }
+
+    .services .container h3{
+        padding: 48px 0 30px;
+    }
+
+    .services .services-content .service-list{
+        width: 100%;
+    }
+
+    .services .services-wrapper .service-img{
+        width: 100%;
+        height: 350px;
+        border-radius: 20px;
+        margin: 48px 0;
+    }
+
+    .services .services-wrapper .service-img img{
+        border-radius: 20px; 
+    }
+
+    .booking{
+        margin: 48px 0;
+        height: 450px;
+    }
+
+    .booking .booking-content span{
+        font-size: 18px;
+    }
+
+    /* .booking .booking-content{
+        
+        padding: 48px 0;
+    } */
+
+    .booking .booking-content h2{
+        font-size: 36px;
+        line-height: 56px;
+    }
+
+    .ourwork-wrapper{
+        justify-content: center;
+    }
+
+    .ourworks .ourworks-img{
+        margin: 10px;
+        width: 220px;
+        height: 220px;
+    }
+
+    .ourworks h3{
+        padding: 15px 0;
+        font-size: 36px;
+    }
+
+    .working-hours .hours-wrapper .hours-img img{
+        margin-bottom: 35px;
+        height: 400px;
+    }
+
+    .working-hours .working-details h4{
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .working-hours .working-details{
+        margin-bottom: 25px;
+    }
+
+    .working-hours .working-details,.working-hours .working-time{
+        padding-left: 0;
+    }
+
+    .working-hours .hours-wrapper{
+        padding: 25px;
+        border-radius: 30px;
+        margin: 48px 0;
+    }
+
+    .footer{
+        padding: 30px 0;
+    }
+
+    .footer-menu ul.d-inline-block{
+        margin-top: 25px;
+    }
+
+    .footer-menu ul li{
+        padding-left: 0;
+        padding: 0 5px 0;
+    }
+
+    .footer-copyright p{
+        margin: 0;
+        padding: 25px 0;
+    } 
+
+    .footer .col-12:nth-child(2) .footer-info{
+        margin-left: 48px !important;
+        padding-left: 0 !important;
+    }
+}
+
+
+

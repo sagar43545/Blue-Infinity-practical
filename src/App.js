@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './pages/home/components/Header';
+import Slider from './pages/home/components/Slider';
+import About from './pages/home/components/About';
+import Services from './pages/home/components/Services';
+import BookingNow from './pages/home/components/BookingNow';
+import OurWorks from './pages/home/components/OurWorks';
+import WorkingHours from './pages/home/components/WorkingHours';
+import Footer from './pages/home/components/Footer';
+import Copyright from './pages/home/components/Copyright';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header></Header>
+      <Slider></Slider>
+      <About></About>
+      <Services></Services>
+      <BookingNow></BookingNow>
+      <OurWorks></OurWorks>
+      <WorkingHours></WorkingHours>
+      <Footer></Footer>
+      <Copyright></Copyright>
+    </>
   );
 }
 
